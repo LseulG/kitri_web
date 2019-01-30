@@ -1,0 +1,99 @@
+* JSP (Java Server Page)
+- language
+ - compile 기반 : Servlet (실행 속도 빠름. 코딩이 어렵다.)
+ - script 기반 : PHP, ASP (컴파일 기반에 비해 실행 속도가 느림. 코딩 쉽다)
+ - JSP : 코딩시는 script 기반, 실행시는 compile 기반. 실행시 servlet으로 바뀌어서 실행됨.
+ 
+-- Script 요소
+	형식) <%		java code 	%>
+	
+1. 선언문 : page 전역에서 사용 할 변수, 메소드를 선언하는 영역.(java의 전역영역)
+	형식) <%!	 변수, 메소드 	%>
+	예)
+	<%!
+	String name;
+	
+	public int plus(int x, int y){
+		return x+y;
+	}
+	%>
+	
+2. 처리문 : client 호출시 매번 실행되는 영역. (servlet의 service method 안에 영역)
+			request, response 관련 작업.
+	형식) <%		request, response 관련 logic 처리 	%>
+	예)
+	<%
+	name = request.getParameter("name");
+	DB 작업
+	
+	out.print(name);
+	%>
+	<html code>
+	<%
+	java code
+	out.print(plus(2,5));
+	%>
+	
+3. 출력문 : client의 출력내용에 포함.
+	형식) <%=		출력할수 있는 문자열(혹은 숫자) 	%>
+	예) <%= name %> (<% out.print(name); %> 이거랑 같은 뜻) 
+			*** 주의점 <%= name; %> 세미콜론 주의할것 ***
+	<html code>
+	<%= plus(2,5) %>
+	
+	
+	
+== Servlet
+public class ServletName extends HttpServlet {
+
+	// 선언(변수, 메소드). 전역영역
+	
+	// service method
+	public void service(request, response){
+	
+	}
+}
+
+
+** jsp directive(지시문) : 
+	<%@ 지시문 종류(page/include/taglib) 속성n="값n" %>
+	<%@ kind 속성1="값1" 속성2="값2" ... 속성n="값n" %>
+
+- page
+<%@ page 속성1="값1" 속성2="값2" ... 속성n="값n" %> 	** pdf참조
+
+- include
+<%@ include file="file path" %>
+
+- taglib
+<%@ taglib prefix="값" uri="URI" %>
+
+
+
+
+
+############## 주석 꿀팁~ ####################################
+<!-- 여기 주석은 코드에서 보입니다. (html 주석) -->
+<%-- 여기 주석은 코드에서 보이지 않습니다. (jsp 주석) --%>
+
+jsp 코드는 java가 tomcat에서 먼저 실행되기 때문에 html 주석 처리 시 java 내용은 넘어가서 에러가 날 수 있음.
+반드시 jsp 주석으로 처리해야함.
+<%-- 당신의 이름은 <% out.println(name); %>입니다.<br> --%> 
+<!-- 당신의 이름은 <% out.println(name); %>입니다.<br> --> 
+
+##########################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
