@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function showTime(){
+		var d = new Date();
+		var view = document.getElementById("timeview");
+		view.innerHTML = d;
+	}
+	window.onload = function() {
+		setInterval(showTime, 1000);
+	}
+</script>
+</head>
+<body>
+	<div align="center">
+		<h3>현재 시간</h3>
+		<span id="timeview"></span>
+	</div>
+</body>
+</html>

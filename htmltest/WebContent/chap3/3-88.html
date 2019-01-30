@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+	table {
+		width: 500px;
+		height: 500px;
+		border: darkgray 1px solid;
+	}
+	td, th {
+		border: darkgray 1px solid;
+	}
+	td {
+		padding-left: 10px;
+	}
+	
+	.subm,.rese, .overl{
+		display: inline-block;
+		background-color: #fff;
+		border: 1px solid #dedede;
+		cursor: pointer;
+		padding: 5px;	
+		margin: 1px 4px 1px 4px;
+	}
+	.overl{ margin-left: 10px; }
+	
+	.subm img, .rese img{
+		border: 0;
+		padding: 2px;
+		width: 14px;
+		height: 14px;
+	}
+	.subm:hover, .rese:hover, .overl:hover{
+		background-color: #e6efc2;
+		border: 1px solid #c6d880;
+		color: #529215;
+	}
+	</style>
+</head>
+<body>
+	<h3 align="center">form control test - 회원가입</h3>
+	<!-- 10*2 -->
+	
+	<table align="center">
+		<tr>
+			<th width="180">이름*</th>
+			<td>
+				<input type="text" name="name">
+			</td>
+		</tr>
+		<tr>
+			<th>아이디*</th>
+			<td>
+				<input type="text" name="id">
+				<button type="button" class="overl" onclick="alert('중복확인중');">
+				중복확인</button>
+			</td>
+		</tr>
+		<tr>
+			<th>비밀번호*</th>
+			<td>
+				<input type="password" name="pwd">
+			</td>
+		</tr>
+		<tr>
+			<th>비밀번호확인*</th>
+			<td>
+				<input type="password" name="pwd">
+			</td>
+		</tr>
+		<tr>
+			<th>이메일*</th>
+			<td>
+				<input type="text" name="email" size="5">
+				@
+				<select name="email">
+					<option value="naver.com" selected="selected">네이버</option>
+					<option value="gmail.com">지메일</option>
+					<option value="daum.net">다음</option>
+				</select>
+				<input type="text" name="email" size="10">
+			</td>
+		</tr>
+		
+		<tr>
+			<th>성별</th>
+			<td>
+				<label><input type="radio" name="gender" value="male" checked="checked">남</label>
+				<label><input type="radio" name="gender" value="female">여</label>
+			</td>
+		</tr>
+		<tr>
+			<th>연락처</th>
+			<td>
+				<select name="phone">
+					<option value="010">010</option>
+					<option value="02" selected="selected">02</option>
+					<option value="031">031</option>
+					<option value="032">032</option>
+					<option value="043">043</option>
+					<option value="064">064</option>
+				</select>
+				-
+				<input type="tel" name="phone" size="5" maxlength="4">
+				-
+				<input type="tel" name="phone" size="5" maxlength="4">
+			</td>
+		</tr>
+		<tr>
+			<th colspan="2">좋아하는 과일</th>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<label><input type="checkbox" name="fruit" value="grapefruit">자몽</label>
+				<label><input type="checkbox" name="fruit" value="banana">바나나</label>
+				<label><input type="checkbox" name="fruit" value="cherry">체리</label>
+				<label><input type="checkbox" name="fruit" value="orange">오렌지</label>
+			</td>
+		</tr>
+		<tr>
+			<th colspan="2">
+				<button type="submit" class="subm">
+					<img src="/htmltest/img/check.png">전송하기
+				</button>
+				<button type="reset" class="rese">
+					<img src="/htmltest/img/reset.png">초기화
+				</button>
+			</th>
+		</tr>
+	</table>
+</body>
+</html>

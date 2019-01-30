@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/* title 속성 있는것 */
+	[title] { color: magenta; font-weight: bold; }
+	/* title 속성 중에 값이 two인것 테두리 2로 굵게*/
+	[title="two"] { border: 2px solid green; }
+	/* p 태그중에서 title 속성 중에 값이 two인것 배경색 회색*/
+	p[title="two"] { background: lightgray; }
+	/* p 태그중에서 title 속성 중에 값이 second들어있는 (공백으로 구분) 배경색 */
+	p[title~="second"] { background: cyan; }
+</style>
+</head>
+<body>
+	<div title="one">attribute name</div>
+	<div title="two">attribute name=value</div>
+	<p title="two">attribute name=value</p>
+	<p title="first second third">attribute name~=value</p>
+	<p class="second-container">attribute name^=value</p>
+	<p class="second-wrap">attribute name$=value</p>
+	<div class="one-two-three">attribute name|=value</div>
+</body>
+</html>

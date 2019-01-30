@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	console.log(parseInt('1A'));	//1	
+	console.log(parseInt('A'));		//NaN
+	
+	console.log(new Number('1'));	// 1
+	console.log(new Number('1A'));	// Nan
+	console.log(new Number('A'));	// Nan
+	
+	console.log('작은따옴표도 됨 \'이것도 됨\' 히히');
+	console.log("문장 후에 \n 줄바꿈도 된다.")
+	
+	var msg = 10;
+	console.log("msg:" + msg);		//msg:10
+	msg = "hello";
+	console.log(msg)	//hello
+	
+	console.log("10" + 5);	//105
+	console.log("10" - 5); 	//5
+	
+	console.log(parseInt("123.56")+1);		//124
+	console.log(parseFloat("123.56")+1);	//124.56
+	
+	console.log("1.1" + "1.1");			//1.11.1
+	console.log((+"1.1") + (+"1.1")); 	//2.2
+</script>
+</head>
+<body>
+
+</body>
+</html>

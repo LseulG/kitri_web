@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	span { background-color: lightgray; }
+	div { background-color: tomato; }
+	div.target1 { display: inline; }
+	span.target2 { display: block; }
+	div.last { display: none; }
+	/* div.last { display: ; } */
+</style>
+</head>
+<body>
+	<span>span : Inline-Level.</span>
+	<div class="target1">div(target1) : Block >> Inline change.</div>
+	<span>span : Inline-level.</span>
+	<span class="target2">span(target2) : inline >> block change</span>
+	<div class="last">last element(dispaly:none)</div>
+</body>
+</html>

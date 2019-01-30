@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="http://www.naver.com">
+	<h3>좋아하는 과일</h3>
+		<label><input type="checkbox" name="fruit" value="귤">귤</label>
+		<label><input type="checkbox" name="fruit" value="바나나">바나나</label>
+		<label><input type="checkbox" name="fruit" value="자몽" checked="checked">자몽</label>
+		<label><input type="checkbox" name="fruit" value="체리">체리</label>
+		
+	<h3>성별</h3>
+		<label><input type="radio" name="gender" value="남" checked="checked">남자</label>
+		<label><input type="radio" name="gender" value="여" checked="checked">여자</label>
+
+	<h3>색상</h3>
+		<input type="color" name="pcolor" value="#00ff00">색상
+	
+	<h3>날짜</h3>
+		<input type="date"><br>
+		
+	<h3>버튼</h3>
+	<!-- 여기 데이터를 가지고 액션주소로 간다 -->
+	<input type="submit" value="전송">
+	
+	<!-- 초기화면으로 돌아감 -->
+	<input type="reset" value="초기화">
+	
+	<!-- 이벤트 없는 버튼 -->
+	<input type="button" value="눌러" onclick="alert('버튼 눌렀니?');">
+	
+	<!-- 이미지를 누르면 데이터 가지고 이동 -->
+	<input type="image" src="htmltest/img/logo.png">
+	
+	<!-- 이건 form 밖에서도 쓸수 있음. 안에서 쓰면 submit 효과로 데이터 가지고 액션주소 이동 -->
+	<button onclick="alert('버튼 눌렀니?????????????');">눌러</button>
+	
+	<h3>파일</h3>
+	<input type="file">
+	</form>
+</body>
+</html>

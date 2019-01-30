@@ -1,0 +1,32 @@
+membermvc
+	- src
+		- com.kitri.member.controller
+			MemberController.java (/user)
+			
+		(차후 model 3개 합쳐도 됨)
+		- com.kitri.member.model
+			(Dto는 table과 연결)
+			MemberDto.java
+			MemberDetailDto.java
+			ZipCodeDto.java
+		
+		- com.kitri.member.model.service
+			MemberService.java (Interface)
+			MemberServiceImpl.java (인터페이스를 구현하는 클래스)
+		
+		- com.kitri.member.model.dao
+			MemberDao.java (I)
+			MemberDaoImpl.java
+		
+		- com.kitri.util
+			DBConnection.java
+			DBClose.java
+	
+	- webContent
+		- doc
+		- css
+		- join
+			회원관련 jsp
+		- login
+			로그인관련 jsp
+		- index.jsp

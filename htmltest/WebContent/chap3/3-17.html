@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/* css 주석은 요게 되넹 */
+.subm{
+	display: block;
+	background-color: #fff;
+	border: 1px solid #dedede;
+	cursor: pointer;
+	padding: 5px 10px 6px 7px;	
+}
+.subm img{
+	border: 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+}
+.subm:hover{
+	background-color: #e6efc2;
+	border: 1px solid #c6d880;
+	color: #529215;
+}
+</style>
+</head>
+<body>
+<h3>select box ex</h3>
+<form action="">
+	<fieldset>
+		<legend>선택사항</legend>
+		<h5>전화번호</h5>
+		<input type="tel" name="tel1">
+		-
+		<input type="tel" name="tel2">
+		-
+		<input type="tel" name="tel3">
+	</fieldset>
+	<fieldset>
+		<legend>선택사항</legend>
+		<h5>전화번호</h5>
+		<select name="tell1" size="3">
+			<option value="010">핸드폰
+			<option value="02" selected="selected">서울
+			<option value="031">경기
+			<option value="041">충청			
+		</select>
+		-
+		<input type="tel" name="tell2" size="4" maxlength="4">
+		-
+		<input type="tel" name="tell3" size="4" maxlength="4">
+	</fieldset>
+	<fieldset>
+		<legend>설문조사</legend>
+		<h5>선호채널</h5>
+		<select name="chanel">
+			<option value="mbc">MBC
+			<option value="kbs">KBS
+			<option value="sbs">SBS
+			<option value="jtbc">JTBC
+			<option value="tvn">TVN
+			<option value="ytn">YTN
+		</select>
+		<select name="chanell">
+			<optgroup label="지상파">
+				<option value="mbc">MBC
+				<option value="kbs">KBS
+				<option value="sbs">SBS
+			</optgroup>
+			<optgroup label="종편">
+				<option value="jtbc">JTBC
+				<option value="tvn">TVN
+				<option value="ytn">YTN
+			</optgroup>
+		</select>
+	</fieldset>
+	<fieldset>
+		<legend>검색</legend>
+		<h5>검색어</h5>
+		<input type="search" list="subject">
+		<datalist id="subject">
+			<option value="java">자바
+			<option value="oracle">오라클
+			<option value="spring">스프링
+			<option value="android">안드로이드
+			
+		</datalist>
+	</fieldset>
+	<fieldset>
+		<legend>작성</legend>
+		<h5>자기소개</h5>
+		<textarea name="myinfo" rows="10" cols="20">ho
+	
+		ho</textarea>
+		<textarea name="myinfo2" rows="10" cols="20" disabled="disabled">wow
+		wow</textarea>
+		<textarea name="myinfo2" rows="10" cols="20" readonly="readonly">wow
+		wow</textarea>
+	</fieldset>
+	
+	<button type="submit" class="subm">
+		<img src="/htmltest/img/tick.png">전송하기
+	</button>
+</form>
+</body>
+</html>
