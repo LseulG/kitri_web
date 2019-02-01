@@ -25,7 +25,7 @@ String root = request.getContextPath(); // root = '/membermvc'
 				iderrorview.style = "display:none" ;
 				return;
 			} else {
-				document.getElementById("loginform").setAttribute("action", "<%=root %>/login/loginprocess.jsp");
+				document.getElementById("loginform").setAttribute("action", "<%=root %>/user");
 				document.getElementById("loginform").submit();
 			}
 		}
@@ -41,6 +41,7 @@ String root = request.getContextPath(); // root = '/membermvc'
 	<div class="testbox box2">
 		<h1>로그인</h1>
 		<form name="loginform" id="loginform" method="post" action="">
+		<input type="hidden" name="act" value="login">
 		<hr>	
 		<div class="accounttype" align = "left">
 		로그인<br>
