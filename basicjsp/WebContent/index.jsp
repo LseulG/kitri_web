@@ -26,7 +26,7 @@ Hello JSP!!! <br>
 <a href="/basicjsp/param/form.jsp">파라미터전송.</a><br>
 <a href="/basicjsp/param/multiform.jsp">멀티파라미터전송.</a><br>
 <a href="/basicjsp/counter.jsp">카운터</a><br>
-<a href="/basicjsp/dbcounter.jsp">DB카운터</a><br>
+<a href="/basicjsp/dbcounter.jsp">DB카운터d</a><br>
 </div>
 </body>
 </html>
