@@ -5,6 +5,15 @@ public class BoardListDto extends CategoryDto {
 	private int bcode;
 	private String bname;
 	private int btype;
+	private String control;
+
+	public String getControl() {
+		return control;
+	}
+
+	public void setControl(String control) {
+		this.control = control;
+	}
 
 	public int getBcode() {
 		return bcode;

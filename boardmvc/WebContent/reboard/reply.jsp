@@ -1,21 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%
-String root = request.getContextPath();
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="root" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ko">
 <head>
 <title>게시판 글쓰기</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="<%=root%>/css/skin_purple.css" type="text/css">
+<link rel="stylesheet" href="${root}/css/skin_purple.css" type="text/css">
 </head>
 
 <body>
 <!-- title -->
 <table width="100%" cellpadding="0" cellspacing="0" border="0">
 	<tr>
-		<td><img src="<%=root%>/img/board/m_icon_board.gif" width="9"
+		<td><img src="${root}/img/board/m_icon_board.gif" width="9"
 			height="9" border="0" align="absmiddle" style="margin-top: -2px">
 		<b>자유게시판</b> &nbsp;<font style="font-size: 8pt">|</font>&nbsp; 자유로운 글을
 		올리는 공간입니다<br>
@@ -29,7 +28,7 @@ String root = request.getContextPath();
 
 <table border="0" cellpadding="0" cellspacing="0" width="630">
 	<tr>
-		<td><img src="<%=root%>/img/board/icon_arrow_04.gif" width="4"
+		<td><img src="${root}/img/board/icon_arrow_04.gif" width="4"
 			height="11" border="0" align="absmiddle" vspace="4"></td>
 		<td width="100%" style="padding-left: 4px"><b>답글쓰기</b></td>
 	</tr>
@@ -50,18 +49,18 @@ String root = request.getContextPath();
 
 	<tr valign="top">
 		<td width="95" nowrap style="padding-left: 8px; padding-top: 10px"><img
-			src="<%=root%>/img/board/e_dot.gif" width="4" height="4" border="0"
+			src="${root}/img/board/e_dot.gif" width="4" height="4" border="0"
 			align="absmiddle"> <b>제목</b></td>
 		<td colspan="5"><input name="subject" id="subject" type="text"
 			size="76" maxlength="150" class="inp_02" style="width: 300px"
-			value=""><img src="<%=root%>/img/board/i_info.gif" width="12"
+			value=""><img src="${root}/img/board/i_info.gif" width="12"
 			height="11" border="0" align="absmiddle" vspace="8"
 			style="margin: 3 3 0 6"><font class="stext">최대 한글 75자,
 		영문 150자</font><br>
 		</td>
 	</tr>
 	<tr>
-		<td width="95" nowrap style="padding-left: 8px; padding-top: 10px"><img src="<%=root%>/img/board/e_dot.gif" width="4"
+		<td width="95" nowrap style="padding-left: 8px; padding-top: 10px"><img src="${root}/img/board/e_dot.gif" width="4"
 			height="4" border="0" align="absmiddle"> <b>글내용</b></td> 
 		<td colspan="5">	
 			<textarea
@@ -84,10 +83,10 @@ String root = request.getContextPath();
 	</tr>
 	<tr>
 		<td align="center"><a href="javascript:writeArticle();"><img
-			src="<%=root%>/img/board/btn_register.gif" width="42" height="21"
+			src="${root}/img/board/btn_register.gif" width="42" height="21"
 			border="0" name="register" value="" alt="등록"></a> <a
 			href="javascript:history.back();"><img
-			src="<%=root%>/img/board/b_cancel.gif" width="42" height="21"
+			src="${root}/img/board/b_cancel.gif" width="42" height="21"
 			border="0" name="cencel" value="" alt="취소"></a></td>
 	</tr>
 </table>

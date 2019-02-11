@@ -39,7 +39,11 @@ public class AdminBoardDaoImpl implements AdminBoardDao {
 		try {
 			conn = DBConnection.makeConnection();
 			StringBuffer sql = new StringBuffer();
-			sql.append("select bl.bcode, bl.bname, bl.btype, c.ccode, c.cname \n");
+			sql.append("select bl.bcode, bl.bname, bl.btype, c.ccode, c.cname, \n");
+			sql.append("		decode(btype, '5', 'reboard', \n");
+			sql.append("					  '6', 'album', \n");
+			sql.append("					  '7', 'bbs', \n");
+			sql.append("					  'board') control \n");
 			sql.append("from board_list bl, category c \n");
 			sql.append("where bl.ccode = c.ccode \n");
 			sql.append("order by c.ccode, bl.bcode");
