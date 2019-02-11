@@ -2,6 +2,19 @@
     pageEncoding="UTF-8"%>
 <%
 String root = request.getContextPath(); // root = '/membermvc'
+
+Cookie cookies[] = request.getCookies();
+String sid = ""; /* null 말고 ""으로 */
+String idck = "";
+if (cookies != null) {
+	for (Cookie cookie : cookies) {
+		if (cookie.getName().equals("nid_sid"))	{
+			sid = cookie.getValue();
+			idck = "checked=\"checked\"";
+			break;
+		}
+	}
+}
 %>
 <!doctype html>
 <html lang="ko">
@@ -25,7 +38,7 @@ String root = request.getContextPath(); // root = '/membermvc'
 				iderrorview.style = "display:none" ;
 				return;
 			} else {
-				document.getElementById("loginform").setAttribute("action", "<%=root %>/login/loginprocess.jsp");
+				document.getElementById("loginform").setAttribute("action", "<%=root %>/user");
 				document.getElementById("loginform").submit();
 			}
 		}
@@ -41,10 +54,11 @@ String root = request.getContextPath(); // root = '/membermvc'
 	<div class="testbox box2">
 		<h1>로그인</h1>
 		<form name="loginform" id="loginform" method="post" action="">
+		<input type="hidden" name="act" value="login">
 		<hr>	
 		<div class="accounttype" align = "left">
-		로그인<br>
-		<input type="text" name="id" id="id" value="" size="12" placeholder="ID"  required/>
+		<input type="checkbox" name="idsave" id="idsave" value="idsave" <%=idck %>>아이디저장<br>
+		<input type="text" name="id" id="id" value="<%=sid %>" size="12" placeholder="ID"  required/>
 		<div id="idblank" style="display: none;"></div>
 		<input type="password" name="pass" id="pass" size="12" maxlength="12" placeholder="Password"  required/>
 		<div id="passblank" style="display: none;"></div>

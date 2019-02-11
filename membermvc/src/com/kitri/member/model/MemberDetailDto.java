@@ -2,7 +2,7 @@ package com.kitri.member.model;
 
 public class MemberDetailDto extends MemberDto {
 
-//	private String id;
+	private String id;
 	private String tel1;
 	private String tel2;
 	private String tel3;
@@ -10,13 +10,13 @@ public class MemberDetailDto extends MemberDto {
 	private String address;
 	private String addressDetail;
 
-//	public String getId() {
-//		return id;
-//	}
-//
-//	public void setId(String id) {
-//		this.id = id;
-//	}
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getTel1() {
 		return tel1;

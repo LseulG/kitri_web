@@ -1,6 +1,8 @@
 package com.kitri.member.model.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.kitri.member.model.MemberDetailDto;
 import com.kitri.member.model.MemberDto;
@@ -18,14 +20,12 @@ public class MemberServiceImpl implements MemberService {
 	
 	@Override
 	public int idCheck(String id) {
-		// TODO Auto-generated method stub
-		return 0;
+		return memberDao.idCheck(id);
 	}
 
 	@Override
 	public List<ZipCodeDto> zipSearch(String doro) {
-		// TODO Auto-generated method stub
-		return null;
+		return memberDao.zipSearch(doro);
 	}
 
 	@Override
@@ -53,8 +53,11 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public MemberDto login(String id, String pass) {
-		// TODO Auto-generated method stub
-		return null;
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("userid", id);
+		map.put("userpass", pass);
+		
+		return memberDao.login(map);
 	}
 
 }
